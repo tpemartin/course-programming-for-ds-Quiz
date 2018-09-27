@@ -27,7 +27,6 @@ quiz(
 )
 ```
 
----
 
 ### Question 2
 
@@ -35,7 +34,7 @@ On line 3, show the first 10 rows of student.
 \
 \
 *(If you cannot figure it out, please click "hint".)*
-```{r quiz2, exercise=TRUE, exercise.lines = 5, exercise.eval=TRUE}
+```{r quiz2, exercise=TRUE, exercise.lines = 5, exercise.eval=TRUE, message=FALSE}
 library(readr)
 student <- read_csv("https://raw.githubusercontent.com/tpemartin/course-107-1-programming-for-data-science/master/data/student.csv")
 
@@ -45,7 +44,6 @@ student <- read_csv("https://raw.githubusercontent.com/tpemartin/course-107-1-pr
 #Find the argument for setting the number of rows
 ```
 
----
 
 ### Question 3
 
