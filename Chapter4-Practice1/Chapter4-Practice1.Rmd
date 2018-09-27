@@ -1,0 +1,65 @@
+---
+title: "Chapter4"
+output: learnr::tutorial
+runtime: shiny_prerendered
+---
+
+```{r setup, include=FALSE}
+library(learnr)
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+## Practice 1
+
+### Question 1 
+
+```{r quiz1}
+quiz(
+  question("If you type c(2L, 'a', 3.0, 4), how will the data type of \"2L\" be changed?",
+    answer("From an integer to a character", correct = TRUE),
+    answer("From a numeric to an integer"),
+    answer("From an integer to a numeric"),
+    answer("From a character to an integer"),
+    incorrect = "Incorrect! Type help(c) and read the description part carefully.",
+    allow_retry = TRUE
+  )
+)
+```
+
+---
+
+### Question 2
+
+On line 3, show the first 10 rows of student. 
+\
+\
+*(If you cannot figure it out, please click "hint".)*
+```{r quiz2, exercise=TRUE, exercise.lines = 5, exercise.eval=TRUE}
+library(readr)
+student <- read_csv("https://raw.githubusercontent.com/tpemartin/course-107-1-programming-for-data-science/master/data/student.csv")
+
+```
+```{r quiz2-hint}
+?head()
+#Find the argument for setting the number of rows
+```
+
+---
+
+### Question 3
+
+Now, finish the following requirement in only one step. \
+1. Set gender as a factor. \
+2. Change labels: 男性 to Male & 女性 to Female
+\
+\
+*(If you cannot figure it out, please click "hint".)*
+```{r quiz3, exercise=TRUE, exercise.lines = 5}
+gender <- c("男性", "男性", "女性", "男性", "女性", "男性")
+```
+
+```{r quiz3-hint}
+?factor
+#Find the argument for setting the labels
+```
